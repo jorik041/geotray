@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([A-Za-z0-9-]+)/?$ /index.php?pos_hash=$1 [L]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /index.php?pos_hash=$1&pos_format=$2 [L]
